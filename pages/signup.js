@@ -14,7 +14,7 @@ const Signup = () => {
   });
   const { isAuthenticated, signup } = useContext(AuthContext);
   useEffect(() => {
-    if (isAuthenticated) router.push("/");
+    if (isAuthenticated) router.push("/board");
   }, [isAuthenticated]);
 
   const handleChange = (e) => {
