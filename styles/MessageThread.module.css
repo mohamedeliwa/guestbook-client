@@ -1,23 +1,29 @@
+.messageCard {
+    margin: 10px;
+    padding: 3px 3px 3px 5px;
+}
 .messageBox {
     background-color: #eee;
     border-radius: 5px;
     margin: 10px;
     padding: 3px 3px 3px 5px;
-    cursor: pointer;
-}
-.messageBox:hover{
-    box-shadow: 3px 3px 10px grey;
 }
 .username {
     font-size: 11px;
     font-weight: 700;
     color: rgb(26, 26, 26);
     display: inline;
-    /* line-height: 20px; */
-    /* text-decoration: none; */
-    /* vertical-align: baseline; */
 }
 .messageContent {
     font-size: 17px;
     color: rgb(26, 26, 26);
+}
+.backbtn {
+    text-decoration: none;
+}
+.backbtn:link,
+.backbtn:visited,
+.backbtn:hover,
+.backbtn:active{
+    text-decoration: none;
 }

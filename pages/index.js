@@ -22,8 +22,8 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a href="/">Home</a>
         <a href="/board">Board</a>
+        <a href="/message">meassge</a>
       </footer>
     </div>
   );
