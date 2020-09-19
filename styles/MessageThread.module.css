@@ -1,0 +1,20 @@
+.messageCard {
+    margin: 10px;
+    padding: 3px 3px 3px 5px;
+}
+.messageBox {
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 3px 3px 3px 5px;
+}
+.username {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgb(26, 26, 26);
+    display: inline;
+}
+.messageContent {
+    font-size: 17px;
+    color: rgb(26, 26, 26);
+}

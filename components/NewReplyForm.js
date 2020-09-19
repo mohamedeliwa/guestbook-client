@@ -1,6 +1,7 @@
 import styles from "../styles/NewMessageForm.module.css";
 import { Form, Button, Col, InputGroup, FormControl } from "react-bootstrap";
-const NewMessageForm = () => {
+
+const NewReplyForm = () => {
   return (
     <footer className={styles.footer}>
       <Form className={styles.form}>
@@ -9,7 +10,7 @@ const NewMessageForm = () => {
             <Form.Control
               className={styles.messageInputArea}
               id="inlineFormInput"
-              placeholder="New message"
+              placeholder="New reply"
             />
           </Col>
 
@@ -24,4 +25,4 @@ const NewMessageForm = () => {
   );
 };
 
-export default NewMessageForm;
+export default NewReplyForm;
