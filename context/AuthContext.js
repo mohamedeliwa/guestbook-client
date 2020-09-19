@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-// import fetch from "isomorphic-unfetch";
 import { useRouter } from "next/router";
 
 const initialState = {
@@ -21,7 +20,6 @@ const AuthContextProvider = (props) => {
   const [state, setState] = useState(initialState);
 
   // fetching user profile if he is authenticated
-  // if he authenticated the jwt token will exist in the request's cookies
   useEffect(() => {
     (async () => {
       try {
@@ -30,8 +28,6 @@ const AuthContextProvider = (props) => {
         const response = await fetch(url, { credentials: "include" });
         if (response.status === 200) {
           const user = await response.json();
-          // setting user avat url
-          user.avatar = `http://localhost:5000/users/${user._id}/avatar`;
           setState({
             isAuthenticated: true,
             user,
@@ -78,8 +74,7 @@ const AuthContextProvider = (props) => {
           isAuthenticated: true,
           user,
         });
-        Router.push("/");
-        alert("a verification sent to your email address");
+        Router.push("/board");
       } else {
         throw new Error("Registeration Failed!");
       }
@@ -101,7 +96,6 @@ const AuthContextProvider = (props) => {
         body: JSON.stringify({
           email: credentials.email,
           password: credentials.password,
-          rememberMe: credentials.rememberMe,
         }),
       });
 
@@ -111,7 +105,7 @@ const AuthContextProvider = (props) => {
           isAuthenticated: true,
           user,
         });
-        Router.push("/");
+        Router.push("/board");
       } else {
         throw new Error("Login Failed!");
       }
