@@ -1,4 +1,5 @@
 import { Form, Button } from "react-bootstrap";
+import Link from "next/link";
 import styles from "../styles/LoginForm.module.css";
 
 const LoginForm = () => {
@@ -18,7 +19,8 @@ const LoginForm = () => {
       </Form.Group>
       <Button variant="primary" type="submit">
         Submit
-      </Button>
+      </Button> or
+      <Link href="/signup"><a className={styles.a}>Sign up</a></Link>
     </Form>
   );
 };
