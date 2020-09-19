@@ -1,8 +1,12 @@
 import { Container, Media } from "react-bootstrap";
+import Link from "next/link";
 import styles from "../styles/MessageThread.module.css";
 const Message = () => {
   return (
     <Container className="pt-5">
+        <Link href="/board">
+            <a className={styles.backbtn}>Back</a>
+        </Link>
       <Media className={styles.messageCard}>
         <Media.Body>
           <h5 className={styles.username}>Jhone Deo</h5>

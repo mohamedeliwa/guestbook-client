@@ -7,9 +7,6 @@ const Message = () => {
   return (
     <Container className={styles.container}>
       <MessageThread />
-      <a href="/board">Board</a>
-      <a href="/">Home</a>
-      <a href="/message">Message</a>
       <NewReplyForm />
     </Container>
   );

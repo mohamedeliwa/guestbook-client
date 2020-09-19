@@ -3,6 +3,10 @@
     border-radius: 5px;
     margin: 10px;
     padding: 3px 3px 3px 5px;
+    cursor: pointer;
+}
+.messageBox:hover{
+    box-shadow: 3px 3px 10px grey;
 }
 .username {
     font-size: 11px;
