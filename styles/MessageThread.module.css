@@ -1,29 +1,41 @@
 .messageCard {
-    margin: 10px;
-    padding: 3px 3px 3px 5px;
+  margin: 10px;
+  padding: 3px 3px 3px 5px;
 }
 .messageBox {
-    background-color: #eee;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 3px 3px 3px 5px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 3px 3px 3px 5px;
 }
 .username {
-    font-size: 11px;
-    font-weight: 700;
-    color: rgb(26, 26, 26);
-    display: inline;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgb(26, 26, 26);
+  display: inline;
 }
 .messageContent {
-    font-size: 17px;
-    color: rgb(26, 26, 26);
+  font-size: 17px;
+  color: rgb(26, 26, 26);
 }
 .backbtn {
-    text-decoration: none;
+  text-decoration: none;
 }
 .backbtn:link,
 .backbtn:visited,
 .backbtn:hover,
-.backbtn:active{
-    text-decoration: none;
+.backbtn:active {
+  text-decoration: none;
+}
+.deletebtn {
+  width: 15px;
+  font-size: 10px;
+  padding: 1px;
+  text-align: center;
+  background-color: lightgrey;
+  color: red;
+  cursor: pointer;
+}
+.deletebtn:hover {
+  box-shadow: 2px 2px 2px grey;
 }

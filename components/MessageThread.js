@@ -31,6 +31,24 @@ const Message = (props) => {
     })();
   }, []);
 
+  const deleteReply = async (e) => {
+    e.preventDefault();
+    try {
+      const url = `http://localhost:5000/replies/${e.target.id}`;
+      const response = await fetch(url, {
+        method: "DELETE",
+        credentials: "include",
+      });
+
+      if (response.status === 200) {
+        router.reload();
+      } else {
+        throw new Error("deleting reply failed!");
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   const message = !state.message ? null : (
     <Media className={styles.messageCard}>
       <Media.Body>
@@ -51,6 +69,9 @@ const Message = (props) => {
               <h5 className={styles.username}>{reply.owner.firstName + " " + reply.owner.lastName}</h5>
               <p className={styles.messageContent}>{reply.content}</p>
             </Media.Body>
+            <span id={reply._id} className={styles.deletebtn} onClick={deleteReply}>
+            X
+          </span>
           </Media>
         );
       })
