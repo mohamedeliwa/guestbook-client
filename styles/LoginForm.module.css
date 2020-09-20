@@ -6,3 +6,23 @@
     border: 1px solid rgb(170, 168, 168);
     border-radius: 3px;
 }
+
+.a {
+    text-decoration: none;
+    /* display: block;
+    margin-top: 5px; */
+    margin-left: 10px;
+}
+.a:link,
+.a:visited,
+.a:hover,
+.a:active{
+    text-decoration: none;
+}
+
+.signupPage{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
