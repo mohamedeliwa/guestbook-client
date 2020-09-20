@@ -25,25 +25,43 @@ const Message = () => {
     })();
   }, []);
 
+  const deleteMessage = async (e) => {
+    e.preventDefault();
+    try {
+      const url = `http://localhost:5000/messages/${e.target.id}`;
+      const response = await fetch(url, {
+        method: "DELETE",
+        credentials: "include",
+      });
+
+      if (response.status === 200) {
+        router.reload();
+      } else {
+        throw new Error("deleting message failed!");
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   const messages = state.reverse().map((message) => {
     return (
       <Link href={`/message?id=${message._id}`} key={message._id}>
         <Media className={styles.messageBox}>
           <Media.Body>
-            <h5 className={styles.username}>{message.owner.firstName + " " + message.owner.lastName}</h5>
-            <p className={styles.messageContent}>
-              {message.content}
-            </p>
+            <h5 className={styles.username}>
+              {message.owner.firstName + " " + message.owner.lastName}
+            </h5>
+            <p className={styles.messageContent}>{message.content}</p>
           </Media.Body>
+          <span id={message._id} className={styles.deletebtn} onClick={deleteMessage}>
+            X
+          </span>
         </Media>
       </Link>
     );
   });
-  return (
-    <Container className="pt-5">
-      {messages}
-    </Container>
-  );
+  return <Container className="pt-5">{messages}</Container>;
 };
 
 export default Message;

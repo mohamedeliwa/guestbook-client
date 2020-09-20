@@ -21,3 +21,15 @@
     font-size: 17px;
     color: rgb(26, 26, 26);
 }
+.deletebtn {
+    width: 15px;
+    font-size: 10px;
+    padding: 1px;
+    text-align: center;
+    background-color: lightgrey;
+    color: red;
+    
+}
+.deletebtn:hover{
+    box-shadow: 2px 2px 2px grey;
+}
